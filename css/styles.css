@@ -1,0 +1,531 @@
+/*공통*/
+*{padding: 0;margin: 0}
+@font-face {
+    font-family: 'NotoSansCJKkr-Black';
+    src: url("font/NotoSansCJKkr-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Bold';
+    src: url("font/NotoSansCJKkr-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-DemiLight';
+    src: url("font/NotoSansCJKkr-DemiLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Light';
+    src: url("font/NotoSansCJKkr-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Medium';
+    src: url("font/NotoSansCJKkr-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Regular';
+    src: url("font/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'NotoSansCJKkr-Thin';
+    src: url("font/NotoSansCJKkr-Thin.otf") format("opentype");
+}
+body {
+    font-family: NotoSansCJKkr-Regular;
+}
+html {
+    font-size: 10px
+}
+
+a{text-decoration: none}
+ul {list-style: none}
+.inner{width: 1280px;margin: 0 auto}
+.hidden{width: 1px;height: 1px;position: absolute;overflow: hidden}
+
+
+/*위헤더*/
+.topheader{width: 100%;height: 40px;line-height: 40px;text-align: center;font-size: 13px}
+.site{width: 274px;float: left;color: #6e6e6e}
+.site>li{width: 32.9%;float: left;background-color: #f0f0f0;border-right: 1px solid #e1e1e1}
+.site>li:nth-child(1){background-color: #898989;color: #fff}
+.site:after{display: block;content:"";clear: both}
+.site>li:nth-child(3)>select{width: 100%;height: 38px;border: none;background-color: #f0f0f0;color: #6e6e6e}
+.topheader>.inner:after{display: block;content: "";clear: both}
+.util{width: 282px;float: right}
+
+.util>li{width: 25%;float: left}
+.util:after{display: block;content: "";clear: both}
+.util>li:before{display: inline-block;content: "";width: 1px;height:10px;background-color: #e1e1e1;margin: 0 10px 0 0}
+.util>li:nth-child(1)>:before{display: none}
+.util>li:nth-child(1){width:20%;padding-left: 5%}
+
+
+/*아래헤더*/
+.bottomheader{width;100%;height:92px;line-height: 92px;text-align: center;border-bottom: 1px solid #e1e1e1;position: relative;font-size: 15px }
+.menu{width: 372px;float: left;color: #6b6b6b}
+.menu>li{width: 22%;float: left;padding: 0 2%;position: relative}
+.menu:after{display: block;content: "";clear: both}
+.menu>li:first-child{padding: 0}
+.menu>li:last-child{padding: 0}
+/* 모바일 메뉴 버튼 */
+
+.m_menu>a{width: 100%;height: 100%; display: block}
+
+a.close{
+    background-color: #3d4a55; width: 50px; height: 50px;
+    position: absolute; right: 0; top: 0; color: #fff;
+    line-height: 50px; text-align: center;
+}
+.left_gnbWrap{
+    height: 100%;
+    width: 200px;
+    position: fixed; right: -200px; top: 0;
+    background-color: #009ef5;
+    padding-top: 50px;
+    z-index: 999;
+    transition: all 0.3s;
+}
+.left_gnbWrap.on{
+    right:0;
+}
+.left_gnb>li{
+    width: 100%;
+}
+.left_gnb>li>a{
+    display: block; text-align: center; line-height: 50px;
+    width: 100%; height: 50px; background-color: #aeaeae;
+    color:white;
+}
+.left_gnb>li>a.on{
+    background-color: #3d4a55;
+}
+.left_gnb>li>ul{
+    display: none;
+}
+.left_gnb>li>ul>li>a{
+    display: block; text-align: center; line-height: 50px;
+    width: 100%; height: 50px; background-color: #aeaeae;
+    color: white;
+}
+
+
+.bottomheader>.inner:after{display: block;content: "";clear: both}
+.logo{position: absolute;width: 280px;left: 0;right: 0;margin: 0 auto;top:15%}
+.submenu{float: right}
+.submenu>.side{width: 321px;float: left;color: #6b6b6b}
+.submenu>.side>li{float: left; padding-right: 30px}
+.submenu>.side:after{display: block; content: ""; clear: both}
+.submenu>.search{float: left;padding: 0 30px}
+.submenu>.m_menu{float: left}
+.submenu:after{display: block;content: "";clear: both}
+.subheader>.inner>ul{width:100%;height: 25px;font-size: 14px}
+.subheader>.inner>ul>li{float:left;padding-right: 18px;color: #8e8e8e}
+.subheader>.inner>ul:after{display: block;content: "";clear: both}
+.subheader:after{display: block;content: "";clear: both}
+
+/*메인이미지*/
+
+
+/*베스트상품*/
+.logo2{text-align: center}
+.bestset{width: 1200px;margin:40px auto 0}
+
+.besttitle{float: left; width: 100%;height: 180px;padding-top: 60px;position: relative}
+.besttitle>.sub1{padding-right: 450px;position: absolute;left:35%}
+.besttitle>.sub2{color: #595959;font-size: 24px;position: absolute;left: 45%;top:35%}
+
+.besttitle>.sub2>p>span{color: #000000;font-size: 47px}
+.besttitle:after{display: block;content: "";clear: both}
+.bestslider{position: relative;width: 1280px;height: 630px;padding-top: 58px}
+.bestslide{float: left;width: 33.3%;text-align: center;position: relative;height: 300px}
+.bestslide>p{padding-top: 25px;}
+.bestslide:after{display: block;content: "";clear: both}
+.best_list:after{display: block;content:"";clear: both}
+.bestslider:after{display: block;content: "";clear: both}
+
+
+/* 넥슨멤버스 */
+.bannerset{width: 100%;height:auto;background-color: #cff1ff;margin-top: 125px}
+.bannerset>.inner{height: 540px;width:1285px;position: relative}
+.bannerset>.inner:after{display: block;content: "";clear: both}
+.bannerset>.inner>p{font-size:25px;padding-top: 65px;color:#14355c;padding-bottom: 30px;font-family: 'NotoSansCJKkr-Bold.otf';font-weight: bold}
+.bannerset>.inner>p>span{font-size:20px;color: #707070 }
+.spce_l{padding-left: 205px;float: left}
+.spce_r{padding-right: 190px;float:right}
+.bannerset>.inner>.list{text-align: center}
+
+.txt1 {
+    font-size: 33px;
+    padding-bottom: 12px
+        ;color: #707070;font-family: 'NotoSansCJKkr-Bold.otf
+            ;font-weight: bold
+}
+
+.btn_view {
+    width: 140px;
+    line-height: 20px;
+    color: #707070;
+    font-size: 13px;padding-left: 40px
+}
+
+.txt2 {
+    font-size: 23px;
+    margin: 28px 0 45px 0
+}
+
+.btnHD1 {
+    width: 215px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #097cc2;
+    text-align: center
+}
+
+#footer{width:100%;height: auto;background-color: #009ef5;font-size: 15px;margin-top: 185px;font-family: 'NotoSansCJKkr-Bold.otf'
+;font-weight: bold}
+.top_footer>.inner>ul>li{float: left;padding-top: 95px;padding-right:25px}
+.top_footer>.inner>ul:after{display: block;content: "";clear: both}
+
+.bottom_footer{padding-top:58px}
+.bottom_footer>.inner:after{display: block;content: "";clear: both}
+.f_logo{float: left;padding-right: 40px}
+.copyright{float: left}
+.copyright>ul>li{position: relative;padding-left: 200px}
+.copyright>ul>li>span{position: absolute;left: 0;color: #fff}
+.copyright>p{padding-top: 33px;color: #fff}
+
+.info{float: right;font-size: 13px}
+.info>ul:after{display: block; content: ""; clear: both}
+.info>ul>li{float: left;padding-right: 20px}
+.info>ul>li:nth-child(1)>span{font-size: 25px; padding-left: 23px;color: #fff}
+.info>ul>li:nth-child(2)>span{font-size: 25px; padding-left: 23px;color: #fff}
+
+
+
+
+
+@media (max-width: 1279px)
+{.inner{width: 98%}
+ #header{height: 132px;position: relative}
+    .topheader{display: none}
+    .bottomheader{border-bottom: none}
+    .menu{float: none;margin: 0 auto;padding-top: 60px}
+    .submenu>.side {display: none}
+    .submenu>.search {display: none}
+    .submenu>.m_menu {float: none;position: absolute;top:5%;left: 5%}
+    .subheader>.inner>ul {display: none}
+    .bestset{width: 100%}
+   .besttitle{width: 100%;height: 80px;position:  relative;text-align: center;padding-bottom: 70px}
+    .bestlist{position: absolute}
+    .bestslide{float: none;width: 100%;height: auto}
+    .bestslide:after{display: block;content: "";clear: both}
+    .bestslide>p {padding-bottom: 40px}
+   .bestslider {height: auto;width: 100%}
+   .bestslider:after{display: block;content: "";clear: both}
+    .bannerset >.inner{width: 98%;height: auto}
+    #footer {width: 100%;height: auto}
+    .logo img{width: 60%}
+    
+    
+    
+        .flickerplate{padding-top: calc(469/1920*100%)}
+.flickerplate ul.flicks > li:nth-child(1){background-image: url(../img/main.jpg);background-size: cover}
+
+.flickerplate ul.flicks > li:nth-child(2){background-image: url(../img/4.jpg);background-size: cover}
+
+.flickerplate ul.flicks > li:nth-child(3){background-image: url(../img/5.jpg);background-size: cover}
+
+}
+
+
+@media (max-width: 680px){
+    .bannerset >.inner{float: revert}
+    .left_gnbWrap{left: -200px}
+    .left_gnbWrap.on{left:0}
+    .besttitle>.sub1 {left: 20%}
+  
+}
+
+
+/*메인이미지 슬라이드*/
+.flickerplate {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: calc(469/1920*100%);
+    background-color: #e6e6e6;
+    overflow: hidden
+}
+
+.flickerplate ul.flicks {
+    width: 10000%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    list-style: none
+}
+
+.flickerplate ul.flicks > li {
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: table
+}
+.flickerplate ul.flicks > li:nth-child(1){background-image: url(../img/main.jpg);background-size: cover}
+
+.flickerplate ul.flicks > li:nth-child(2){background-image: url(../img/4.jpg);background-size: cover}
+
+.flickerplate ul.flicks > li:nth-child(3){background-image: url(../img/5.jpg);background-size: cover}
+
+.flickerplate ul.flicks > li .flick-inner {
+    height: 100%;
+    padding: 10px;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.flickerplate ul.flicks > li .flick-inner .flick-content {
+    max-width: 68.75em;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.flickerplate ul.flicks > li .flick-title {
+    padding: 0px 0px;
+    font-size: 2.778em;
+    line-height: 1.995em;
+    text-align: center
+        
+}
+
+@media (max-width: 320px)
+{.besttitle>.sub1 {left: 10%}
+ .bannerset>.inner>.list {width: 100%}
+}
+
+@media only screen and (max-width: 43.813em) {
+    .flickerplate ul.flicks > li .flick-title {
+        font-size: 1.667em
+    }
+}
+
+.flickerplate ul.flicks > li .flick-sub-text {
+    padding: 5px;
+    font-weight: 300;
+    line-height: 2.5em;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center
+}
+
+.flickerplate ul.flicks > li .flick-title span.flick-block-text,
+.flickerplate ul.flicks > li .flick-sub-text span.flick-block-text {
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.flickerplate .arrow-navigation {
+    position: absolute;
+    height: 80%;
+    width: 10%;
+    top: 10%;
+    z-index: 100;
+    overflow: hidden
+}
+
+.flickerplate .arrow-navigation .arrow {
+    display: block;
+    height: 100%;
+    width: 90%;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out
+}
+
+.flickerplate .arrow-navigation:hover,
+.flickerplate .arrow-navigation .arrow:hover {
+    cursor: pointer
+}
+
+.flickerplate .arrow-navigation.left {
+    left: 0%
+}
+
+.flickerplate .arrow-navigation.left .arrow {
+    opacity: 0;
+    margin: 0px 0px 0px 50%;
+    background-image: url("../img/flickerplate/arrow-left-light.png");
+    background-repeat: no-repeat;
+    background-position: left
+}
+
+.flickerplate .arrow-navigation.right {
+    right: 0%
+}
+
+.flickerplate .arrow-navigation.right .arrow {
+    opacity: 0;
+    margin: 0px 0px 0px -50%;
+    background-image: url("../img/flickerplate/arrow-right-light.png");
+    background-repeat: no-repeat;
+    background-position: right
+}
+
+.flickerplate .arrow-navigation.left.hover .arrow {
+    opacity: 1;
+    margin: 0px 0px 0px 20%
+}
+
+.flickerplate .arrow-navigation.right.hover .arrow {
+    opacity: 1;
+    margin: 0px 0px 0px -20%
+}
+
+.flickerplate .dot-navigation {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 100
+}
+
+.flickerplate .dot-navigation ul {
+    text-align: center;
+    list-style: none;
+    padding: 0px 15px
+}
+
+.flickerplate .dot-navigation ul li {
+    display: inline-block;
+    float: none
+}
+
+
+
+.flickerplate .dot-navigation .dot {
+    width: 14px;
+    height: 14px;
+    margin: 0px 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out
+}
+
+.flickerplate .dot-navigation .dot:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+.flickerplate .dot-navigation .dot.active {
+    background-color: #fff
+}
+
+.flickerplate .dot-navigation.left,
+.flickerplate .dot-navigation.left ul {
+    text-align: left
+}
+
+.flickerplate .dot-navigation.right,
+.flickerplate .dot-navigation.right ul {
+    text-align: right
+}
+
+.flickerplate.flicker-theme-dark .arrow-navigation.left .arrow {
+    background-image: url("../img/flickerplate/arrow-left-dark.png")
+}
+
+.flickerplate.flicker-theme-dark .arrow-navigation.right .arrow {
+    background-image: url("../img/flickerplate/arrow-right-dark.png")
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot {
+    background-color: rgba(0, 0, 0, 0.12)
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot:hover {
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.flickerplate.flicker-theme-dark .dot-navigation .dot.active {
+    background-color: #000
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-title span.flick-block-text,
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text {
+    color: rgba(0, 0, 0, 0.9)
+}
+
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-title span.flick-block-text,
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+.flickerplate.animate-transform-slide ul.flicks {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0%, 0px, 0px);
+    -webkit-transform: translate3d(0%, 0px, 0px);
+    -webkit-transition: -webkit-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s
+}
+
+.flickerplate.animate-transition-slide ul.flicks {
+    position: absolute;
+    left: 0%;
+    top:0;
+    -webkit-transition: left 0.4s ease-out;
+    -moz-transition: left 0.4s ease-out;
+    -o-transition: left 0.4s ease-out;
+    -ms-transition: left 0.4s ease-out;
+    transition: left 0.4s ease-out
+}
+
+.flickerplate.animate-jquery-slide ul.flicks {
+    position: relative;
+    left: 0%
+}
+
+.flickerplate.animate-scroller-slide {
+    padding-bottom: 0px;
+    overflow: auto
+}
+
+.flickerplate.animate-scroller-slide ul.flicks {
+    position: auto
+}
+
+
